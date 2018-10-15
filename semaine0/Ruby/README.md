@@ -1,0 +1,1 @@
+Tout les exercices des journées Jeudi et Vendredi sont dans les dossiers correspondants.
