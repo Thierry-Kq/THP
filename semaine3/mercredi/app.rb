@@ -23,10 +23,10 @@ session = GoogleDrive::Session.from_config("./config.json")
 # First worksheet of
 # https://docs.google.com/spreadsheet/ccc?key=pz7XtlQC-PYx-jrVMJErTcg
 # Or https://docs.google.com/a/someone.com/spreadsheets/d/pz7XtlQC-PYx-jrVMJErTcg/edit?usp=drive_web
-ws = session.spreadsheet_by_key("1gpKzo_6gH78KdlhfEqrxS6xpgKLbnoBqoEVeV0W4tZQ").workdssheets[0]
+ws = session.spreadsheet_by_key("1gpKzo_6gH78KdlhfEqrxS6xpgKLbnoBqoEVeV0W4tZQ").worksheets[0]
 
 # Gets content of A2 cell.
-p ws[2, 1]  #==> "hogefsgfdhe"
+p ws[2, 1]  #==> "hoge"
 
 # Changes content of cells.
 # Changes are not sent to the server until you call ws.save().
