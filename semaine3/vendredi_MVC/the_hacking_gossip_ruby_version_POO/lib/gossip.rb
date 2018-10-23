@@ -17,12 +17,12 @@ attr_reader :content, :author
 
   def self.all
     all_gossips = []
-    CSV::Row.delete("db/gossip.csv", "r") do |csv|
+    CSV.open("db/gossip.csv", "r") do |csv|
       csv.each do |ligne|
         gossip_provisoire = ligne
         all_gossips << gossip_provisoire
       end
-      binding.pry
+      # binding.pry
       return all_gossips
     end
   end

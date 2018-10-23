@@ -1,0 +1,24 @@
+<html>
+<head>
+
+    <title>Edit le potin <%=params['id']%></title>
+  </head>
+  <body>
+    <%id_gossip = params['id']%>
+    <%gossip = Gossip.find(id_gossip)%>
+    <h1>Change un potin !</h1>
+    <p>Balance ton potin, BG</p>
+    <form action='/gossips/edit/<%=id_gossip%>' method='POST'>
+      <p>Ton nouveau potin :</p>
+      <textarea type='text' name='new_content'><%=gossip.content%></textarea>
+      <p>auteur</p>
+      <textarea type='text' name='new_author'><%=gossip.author%></textarea>
+      <input type='submit' value="Changer le potin!" />
+    </form>
+
+  <br>
+  <a href="/">Revenir à l'index</a>
+
+
+</body>
+</html>

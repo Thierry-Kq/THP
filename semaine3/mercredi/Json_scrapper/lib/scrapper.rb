@@ -8,6 +8,7 @@ class GetEmails
     # .css ou .xpath est la meme chose, la gem fais le lien.
     mail = mairie.css("/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]")
     #return mail.text car sinon, on recupere le path du mail.
+    puts mail.text
     return mail.text
   end
 
