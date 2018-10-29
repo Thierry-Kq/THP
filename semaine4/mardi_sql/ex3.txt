@@ -1,0 +1,39 @@
+1 - SELECT * FROM Albums LIMIT 1;
+
+2 - SELECT * FROM Albums WHERE Title '%great%';
+
+3 - SELECT COUNT (Title) FROM Albums;
+
+4 - DELETE FROM albums WHERE title LIKE '%music%';
+
+5 - SELECT * FROM albums WHERE artistID = 1;
+
+6 - SELECT * FROM albums
+    JOIN artists ON albums.ArtistId = artists.ArtistId
+    WHERE artists.name = 'AC/DC';
+
+7 - SELECT * FROM tracks
+    JOIN albums ON albums.AlbumId = tracks.AlbumId
+    JOIN artists ON artists.ArtistId = albums.ArtistId
+    WHERE artists.name = 'AC/DC';
+
+# je select dans les tracks
+# je join les valeur albumid entre album et track
+# je join les valeur artistid entre artist et album
+# et je resort grace au select precedent WHERE le nom d artist = AC DC
+
+8 - SELECT * FROM tracks
+    JOIN albums ON albums.AlbumId = tracks.AlbumId
+    JOIN artists ON artists.ArtistId = albums.ArtistId
+    WHERE artists.name = 'AC/DC';
+
+9 - SELECT SUM(UnitPrice) # ou SUM(Milliseconds)
+    FROM tracks
+    JOIN albums ON albums.AlbumId = tracks.AlbumId
+    WHERE albums.title = 'Let There Be Rock';
+
+10 - SELECT SUM(UnitPrice)
+     FROM tracks
+     JOIN artists ON artists.ArtistId = albums.ArtistId
+     JOIN albums ON albums.AlbumId = tracks.AlbumId
+     WHERE artists.name = 'Deep Purple';
