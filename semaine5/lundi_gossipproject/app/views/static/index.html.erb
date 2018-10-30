@@ -1,0 +1,19 @@
+<body><br>
+<h1>Bienvenue sur la page d'accueil !!!</h1>
+<p>Site en construction.</p>
+<div class="row">
+<% @gossip = Gossip.all 
+Gossip.all.each do |gossip|%><br>
+<div class="card col-4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">From <%= gossip.author.first_name %></h5>
+    <p class="card-text"><%= gossip.content %></p>
+    <div class="btn btn-dark"><%= link_to "Gossip n°#{gossip.id}", "/#{gossip.id}" %></div>
+  </div>
+</div>
+
+<% end %>
+</div>
+
+
+</body>
