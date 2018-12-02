@@ -1,0 +1,23 @@
+<body>
+<div class="row">
+<% Gossip.all.each do |gossip|%><br>
+<div class="card col-4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %></h5>
+    <p class="card-text"><%= gossip.content %></p>
+    <p class="card-text">Auteur : <%= gossip.user.first_name %></p>
+    <div class="btn btn-dark"><%= link_to "Gossip n°#{gossip.id}", user_gossip_path(gossip.user_id, gossip.id) %></div>
+    <p class="card-text">Date de creation : <%= gossip.created_at %></p>
+    <p> il ya  <%= gossip.comments.count %> commentaires</p>
+  </div>
+</div>
+<% end %>
+</div>
+</body>
+<!-- 
+/users/:user_id/gossips/:id
+
+
+user_gossip_path(@current_user.id, @gossip.id)
+
+ -->

@@ -1,0 +1,45 @@
+
+<div class="center">
+    
+    <div class="center">
+        <h3>Rechercher un vol</h3>
+            <%= form_tag(root_path, method: "get") do %>
+
+        <div class="center">
+            <label>Départ</label>  
+            <%= select_tag "departure_airport", options_from_collection_for_select(@airports, "id", "airport_code") %>
+        </div>
+
+        <div class="center">
+            <label>Arrivée</label>  
+            <%= select_tag "arrival_airport", options_from_collection_for_select(@airports, "id", "airport_code") %>
+        </div>
+
+        <div class="center">
+            <label>Nombre de passager</label>  
+            <%= text_field_tag "passenger_number" %>
+        </div>
+
+        <%= submit_tag 'Envoyer', class: 'btn btn-outline-primary' %>
+        <br><br>
+
+    <% end %>
+    </div>
+
+    <br/>
+
+<div>
+  <form>
+    <% @flights.each do |flight| %>
+    <p>Date : <%= flight.departure_date %> . Numero  de vol : <%= flight.id %>. Durée : <%= flight.duration %> minutes</p>
+    <div>
+      <input type="radio" name="drone"
+      checked>
+      <label for="huey">Choisir ce vol</label><br/><br/><br/><br/>
+    </div>
+    <% end %>
+    
+
+    <button type="submit">Envoyer</button>
+  </form>
+</div>

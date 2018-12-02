@@ -1,0 +1,14 @@
+<%= link_to 'Update', update_path, class:"btn btn-secondary" %>
+
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Search for Crypto
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<% @all_currencies.each do |currency| %>
+  		<%= link_to currency.name, find_path(currency.id), method: :post, class:"dropdown-item" %>
+    <% end %>
+  </div>
+</div>
+

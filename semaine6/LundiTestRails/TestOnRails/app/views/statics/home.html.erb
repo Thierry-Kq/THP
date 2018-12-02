@@ -1,0 +1,18 @@
+<% if is_logged_in %>
+<div class="jumbotron">
+  <h1 class="display-4">Bienvenue, <%= @current_user.first_name %> </h1>
+  <p class="lead">Utilise la Navbar pour acceder au Club !!</p>
+  <hr class="my-4">
+  </p>
+</div>
+
+
+<% else %> 
+<div class="jumbotron">
+  <h1 class="display-4">Salut !!</h1>
+  <p class="lead">Pour acceder au Club, Log toi ou inscris toi via la navbar ! </p>
+  <hr class="my-4">
+</div>
+
+
+<% end %>

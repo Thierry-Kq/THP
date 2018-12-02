@@ -1,0 +1,23 @@
+<h1>bonjour</h1>
+
+<% @emails.each do |email| %>
+<div class="card border-primary mb-3",style="max-width: 70%;">
+
+  <% if email.read == true %>
+    <div class="card-header" id="not-read"><%= email.object %></div>
+  <% else %>
+    <div class="card-header" id="readed"><%= email.object %></div>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= email.object %></h5>
+    <p class="card-text"><%= email.body %></p>
+    <%= link_to "Delete", email_path(email),remote: true, class: 'delete_email',
+                                 :data => {:confirm => "You sure?",
+                                           :method => "delete"} %>
+  <br><br></div>
+</div>
+  <% end %>
+
+    </div>
+  </div>
+</div>

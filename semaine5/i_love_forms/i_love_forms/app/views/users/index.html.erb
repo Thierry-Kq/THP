@@ -1,0 +1,11 @@
+<h1>Affichage de tous les utilisateurs !</h1>
+    <% @all_users.each do |user| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"> Prénom : <%= user.username  %> </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> Email : <%= user.email %> </h6>
+          <p class="card-text" > Description : <%= user.bio  %> </p>
+        </div>
+      </div>
+    <% end %>
+    

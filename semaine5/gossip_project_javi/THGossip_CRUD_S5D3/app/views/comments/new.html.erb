@@ -1,0 +1,21 @@
+<% if false %>
+<%  @comments.each do |comment| %>
+<h3> <%= comment.anonymous_commentor %> </h3>
+<p> <%= comment.content %> </p>
+<br/>
+<% end %>
+<% puts @content %>
+<% puts @content %>
+<% puts @content %>
+<% puts @content %>
+<% end %>
+
+<h3> Ajouter un commentaire: </h3>
+    <%= form_for @comment, url: {action: "create"} do |f| %>
+
+<p> <%= f.label :content %><br/> 
+    <%= f.text_area :content %> </p>
+<br/>
+<p> <%= f.submit %> </p>
+<% end %>
+

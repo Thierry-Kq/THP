@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mardi CSS</title>
+</head>
+<body>
+<nav>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <%= image_tag "avatar-nav.png", class: "avatar-nav" %>
+      </div>
+      <div class="navbar-right">  
+        <ul class="nav-content">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="#">Tabs et carroussel</a></li>
+          <li><a href="#">Plus d'infos</a></li>
+        </ul>
+      </div>
+      <div class="nav-avatar">
+        <%= image_tag "avatar.jpg", class: "avatar" %>
+      </div>
+    </div>
+  </nav>
+<div class="tabs">
+           <input id="tab1" type="radio" name="tabs">
+           <label for="tab1">Igloo en kit</label>
+           <input id="tab2" type="radio" name="tabs" checked>
+               <label for="tab2">Nourriture pour ours</label>
+           <input id="tab3" type="radio" name="tabs">
+           <label for="tab3">Cours de vol</label>
+           <input id="tab4" type="radio" name="tabs">
+           <label for="tab4">Oeuf de pingouins</label>
+           <div class="content">
+
+          <div id="content1">
+              <p>En glaçon véritable! L'igloo est livré avec un plan et des mouffles.</p>
+          </div>
+
+          <div id="content2">
+              <p>Nous recyclons tout les pingouins invendus pour sauver les ours polaires !!</p>
+          </div>
+
+          <div id="content3">
+              <p>Qui a dit que les pingouins ne savent pas voler???</p>
+          </div>
+             
+          <div id="content4">
+              <p>Prêts à être élevés avec amour, ou à faire de bonnes omelettes.</p>
+          </div>
+
+           </div>
+    </div>
+
+    <div id="slider-right">
+      <figure>
+        <%= image_tag "carr7.jpg" %>
+        <%= image_tag "carr2.jpg" %>
+        <%= image_tag "carr3.jpg" %>
+        <%= image_tag "carr1.jpg" %>
+        <%= image_tag "carr7.jpg" %>
+        </figure>
+    </div>
+
+</body>
+</html>

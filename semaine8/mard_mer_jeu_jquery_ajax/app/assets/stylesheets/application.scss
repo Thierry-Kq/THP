@@ -1,0 +1,58 @@
+@import "variables/personal_variables";
+@import "variables/bootstrap_variables";
+
+@import "bootstrap";
+@import "font-awesome";
+@import "components/*";
+
+#carrousel {
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+body {
+  margin: 0;
+}
+
+.next , .prev {
+  box-shadow: 10px 10px 8px #888888;
+}
+
+
+.login , .inscr{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: scale(1.5);
+   transform: translate(-50%, -50%);
+   background-color: #f1f1f1;
+   padding: 50px;
+   border-radius: 12px;
+   box-shadow: 0px 8px 30px 0px rgba(0,0,0,0.2);
+   display: none;
+   z-index: 2;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-header {
+ background: linear-gradient(90deg, rgba(255,194,0,1) 0%, rgba(255,194,0,0.5732668067226891) 100%);
+}
+
+
+
+.card {
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.readed {
+  background-image: linear-gradient(to right, #b5b5b5, #a7a7a7 , #999999, #8b8b8b, #7e7e7e);
+}
+
+.new_mess {
+  background-color: white;
+}

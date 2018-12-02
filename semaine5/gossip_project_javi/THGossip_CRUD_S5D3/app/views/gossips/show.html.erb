@@ -1,0 +1,20 @@
+<p>ID du Gossip : <%= @gossip_id.id %></p>
+<p>Title : <%= @gossip_id.title %> </p>
+<p>Content :<%= @gossip_id.content %></p>
+
+
+<div class="btn btn-dark"><%= link_to "Editer le Gossip", edit_user_gossip_path %></div>
+
+
+<div class="btn btn-dark"><%= link_to 'Clique pour détruire', @gossip, method: :delete %></div>
+
+<% if false %>
+<h2> <%= @comments.count %> Commentaires </h2>
+
+<div class="btn btn-dark"><%= link_to 'Aller sur la page des commentaires',  new_gossip_comment_path(@gossip_id) %></div>
+<% @comments.each do |comment| %>
+<h3> <%= comment.user.first_name %> </h3>
+<p> <%= comment.content %> </p>
+
+<% end %>
+<% end %>

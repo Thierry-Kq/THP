@@ -1,0 +1,168 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: solid 5px black;
+  background-color: #212121;
+}
+
+.nav-avatar {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 600px;
+  justify-content: space-between;
+}
+
+.title-nav {
+  display: block;
+  color: white;
+  text-align: justify;
+  margin-top: 0.6em;
+  margin-left: 2em;
+  font-size: 1.5em;
+}
+
+body {
+  background-color: #aeaeae;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-style: italic;
+  font-size: 4em;
+}
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 2.5em;
+}
+
+li a {
+    /*margin-left: 2em;*/
+    display: block;
+    background-color: #212121;
+    color: white;
+    font-size: 1.4em;
+    margin-top: 0.6em;
+    text-align: center;
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+.avatar-name {
+  color: white;
+  font-size: 1.6em;
+  margin-top: 1em;
+}
+
+.active {
+  background-color: red;
+}
+
+.content {
+  display: flex;
+  /*border: solid 2px yellow;*/
+}
+
+.img-right {
+  width:auto;
+  height: 400px;
+
+  margin-right: 50px;
+}
+
+.img-left {
+  width:auto;
+  height: 400px;
+
+  margin-left: 50px;
+}
+
+p {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.6em;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(33,33,33,.9);
+  border: solid 5px black;
+}
+
+div#slider-right figure {
+  position: relative; 
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 30s slidy infinite;
+}
+
+div#slider-right figure img { width: 20%; height: auto; float: left; }
+
+div#slider-right { 
+  width: 80%; max-width: 400px; overflow: hidden;
+  margin-right:50px; }
+
+div#slider-left figure {
+  position: relative; 
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 30s slidy infinite;
+}
+
+div#slider-left figure img { width: 20%; height: auto; float: left; }
+
+div#slider-left { 
+  width: 80%; max-width: 400px; overflow: hidden;
+  margin-left:50px; }
+
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+.logo {
+  margin-right: 30px;
+}

@@ -1,0 +1,23 @@
+<html>
+<% Gossip.all.each do |gossip|%>
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Gossip number</th>
+      <th scope="col">Author</th>
+      <th scope="col">Content</th>
+      <th scope="col">Creation date</th>
+    </tr>
+  </thead>
+
+      <tr class="table-primary">
+      <th scope="row"><%= gossip.id %></th>
+      <td><%= gossip.author.first_name %></td>
+      <td><%= gossip.content %></td>
+      <td><%= gossip.created_at %></td>
+    </tr>
+</table>
+<% end %>
+</html>

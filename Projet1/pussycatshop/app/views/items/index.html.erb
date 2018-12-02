@@ -1,0 +1,140 @@
+
+<main>
+    <section class="slice slice-lg bg-gradient-warning">
+        <div class="position-absolute bottom-0 col-md-9 col-lg-9 col-xl-8 d-none d-md-block">
+            <%= image_tag "catPNG.png", alt: "black cat land-page", class: "img-fluid" %>
+        </div>
+        <div class="container pt-lg">
+            <div class="row justify-content-end">
+                <div class="col-md-6 col-lg-5 text-center text-lg-left">
+                    <div class="">
+                        <h2 class="text-white my-4">
+                            <span class="display-4 font-weight-light">Exclusif.</span>
+                            <span class="d-block">Images inédites <strong>full HD.</strong></span>
+                        </h2>
+                        <p class="lead text-white">Simple et rapide. Près de 27 images de chats à découvrir. Photographes montpelliérains, chats 100% bios <a href="https://fr.wikipedia.org/wiki/In%C3%A9die">(nourris au prana)</a>.</p>
+                        <div class="mt-5">
+                            <a href="#sct-products" class="btn btn-white btn-circle btn-translate--hover btn-icon d-none d-xl-inline-block scroll-me">
+                                <span class="btn-inner--text">Explorer</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-grid mt-lg d-none d-lg-flex">
+                <div class="col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="icon icon-shape icon-orange rounded-circle">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="icon-text px-4">
+                                    <h5>Instantané</h5>
+                                    <p class="mb-0">Envoi d'email automatique dès votre achat terminé avec les liens en HD</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="icon icon-shape icon-blue rounded-circle">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="icon-text px-4">
+                                    <h5>Paiement sécurisé</h5>
+                                    <p class="mb-0">Grâce à Stripe, vous disposez d'une interface de paiement sans risque</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="icon icon-shape icon-pink rounded-circle">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <div class="icon-text px-4">
+                                    <h5>Votre projet</h5>
+                                    <p class="mb-0">Avec nos produits, nous vous garantissons un succès de carrière immédiat </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-container" data-shape-style="wavify" data-shape-position="bottom">
+            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="shape-fill-white" data-toggle="wavify">
+                <defs></defs>
+                <path d="" class="shape-fill-white" />
+            </svg>
+        </div>
+    </section>
+
+    <section class="slice slice-lg" id="sct-products">
+        <div class="container">
+            <div class="mb-5 text-center">
+                <h3 class="h6">Nos derniers produits</h3>
+            </div>
+            <div class="row">
+
+
+                <%@items.each do |item|%>
+                    <div class="col-lg-3 col-sm-6 col-sm-6 mb-5">
+                        <div class="card card-product no-border shadow shadow--hover">
+                            <div class="card-image">
+                                <a href="<%= item_path(item) %>">
+                                    <%if item.image.attached?%>
+                                        <%= image_tag item.image.variant(resize: "210x145"), class: "img-center img-index"%>
+                                    <%end%>
+                                </a>
+                                <span class="ribbon ribbon-right ribbon-primary rounded-circle">New</span>
+                            </div>
+                            <div class="card-body pt-0 text-center">
+                                <a href="shop-product.html" class="card-title"><%=item.title%></a>
+                                <span class="card-price"><%= sprintf('%.2f', item.price) %> €</span>
+                                <%if user_signed_in?%>
+                                <a href="<%= item_cart_path(current_user.cart, item)%> " class="btn btn-primary btn-sm btn-circle" id="button-index">Ajouter au panier</a><br>
+                                <%if current_user.admin%>
+                                    <a href="<%= edit_item_path(item) %>" class="btn btn-danger my-2 btn-sm btn-circle" style="padding: 2px; color: white;">Modifier l'objet</a><br>
+                                <%end%>
+                                <%end%> 
+                                <a href="<%= item_path(item) %>">Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                <%end%>
+            </div>
+        </div>
+
+        <!-- ..................ALL PRODUCTS BUTTON................. -->
+        <!-- <div class="text-center">
+            <a href="shop-products.html" class="btn btn-sm btn-dark btn-circle">See all products</a>
+        </div> -->
+
+    </section>
+
+    <section class="slice slice-lg bg-gradient-warning">
+        <div class="position-absolute bottom-0 col-lg-6 col-xl-5 d-none d-lg-block">
+            <%= image_tag "catPNG.png", alt: "black cat", class: "img-fluid", style: "height: 600px;" %>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6 col-xl-7 text-center text-lg-right">
+                    <div class="mb-5">
+                        <h1 class="text-white">Alors, y sont pas mignons ??</h1>
+                        <p class="lead text-white mt-2">Pour profiter pleinement des services, <a href="<%= new_user_session_path %>"><strong>connectez vous</strong></a> ou <a href="<%= new_user_registration_path %>"><strong>devenez membre </strong></a>.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <%= image_tag("img/backgrounds/" + "clouds-bottom.png", alt: "clouds", style: "margin-bottom: -110px; width: 100%") %>
+    </section>
+</main>

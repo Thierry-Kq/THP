@@ -1,0 +1,34 @@
+<h1> <%= image_tag("logo.png", {:style => "width:100px;"}) %> Bienvenue sur Caramail !</h1><br><br>
+<div class="containerbis">
+  <div class="row">
+    <div class="col-md-2">
+      <% @emails.each do |email| %>
+        <div class="card border-white mb-3
+        <%if email.read%>
+          readed
+        <%else%>
+         new_mess
+        <%end%>
+         ">
+          <div>
+          <%= link_to email.object, email_path(email),remote: true, class: 'btn btn-warning text-black delete_email'%>
+          <%= link_to "Delete", email_path(email),remote: true, id: email.id, class: 'btn-sm btn-outline-danger delete_email',
+                                             :data => {:method => "delete"} %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+      <div class="col-10" > 
+        <div class="card-header"><h2>Contenu du mail :</h2></div>
+        <div class="card-body" id="display-email" >
+          
+        </div>
+      </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+  

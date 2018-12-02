@@ -1,0 +1,20 @@
+<% if @movies == "vide"%>
+  <br>
+  <h4 class="text-center">La recherche à échouée</h4>
+<%elsif @movies%>
+  <div class="row">
+    <% @movies.each do |movie_id, hash_results| %>
+      <div class="card col-lg-3" >
+        <div class="card-body">
+          <div style="diplay: flex">
+            <h5 class="card-title"> 
+              <strong>Titre : <%= hash_results[:name] %>  </strong>
+            </h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted"> <strong>Date de sortie</strong> : <%=hash_results[:release_date]%> </h6>
+          <p class="card-text" > <strong>Réalisateur</strong>: <%=hash_results[:director]%>  </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<%end%>

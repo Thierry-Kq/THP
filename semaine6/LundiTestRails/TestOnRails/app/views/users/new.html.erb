@@ -1,0 +1,17 @@
+<%= form_for @user do |f| %>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      Prenom : <%= f.text_field :first_name, class: 'form-control',  placeholder: 'Ton prenom' %>
+    </div>
+    <div class="form-group col-md-6">
+      Nom : <%= f.text_field :last_name, class: 'form-control',  placeholder: 'Ton nom' %>
+    </div>
+  <div class="form-group col-md-6">
+    Email : <%= f.text_field :email, class: 'form-control', placeholder: 'par@exemple.com' %>
+  </div>
+    <div class="form-group col-md-6">
+    Password : <%= f.text_field :password, class: 'form-control', placeholder: 'Ecris ton password...' %>
+    </div>
+  </div>
+    <%= f.submit class: 'btn btn-primary' %>
+<% end %>

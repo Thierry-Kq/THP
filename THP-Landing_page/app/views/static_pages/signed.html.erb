@@ -1,0 +1,162 @@
+<head>    
+    <style type="text/css">
+        /* counter clock css */
+        ul.countdown {
+            list-style: none;
+            padding: 0;
+            display: block;
+            text-align: center;
+        }
+
+            ul.countdown li {
+                display: inline-block;
+            }
+
+                ul.countdown li span {
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 80px;
+                }
+
+                ul.countdown li.seperator {
+                    font-size: 80px;
+                    line-height: 70px;
+                    vertical-align: top;
+                }
+
+                ul.countdown li p {
+                    color: #fff;
+                    font-size: 14px;
+                    text-transform:capitalize;
+                }
+        /* emd counter clock css */
+    </style>
+</head>
+
+<body>
+
+              <!--Header-->
+            <div id="header" class="header">
+                <div class="header-inner">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="#">
+                          <%= image_tag "logo-light.png" %>
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+
+                    <!--Navigation Icon-->
+                    <div class="nav-menu-icon">
+                        <a><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!--End Navigation Icon-->
+
+                    <!-- Navigation Menu -->
+                    <div class="nav-menu">
+                        <ul class="nav-menu-inner nav-external">
+                            <li><%= link_to "Home",root_path %></li>
+                            <li><%= link_to "Montpellier", montpellier_path %></li>
+                            <li><%= link_to "Demandeur d'emploi", jobseeker_path %></li>
+                        </ul>
+                    </div>
+                    <!-- End Navigation Menu -->
+                </div>
+            </div>
+            <!--End Header-->
+
+            <!--Intro Section-->
+            <section id="intro" class="intro-fullscreen">
+                <!--Static Hero-->
+                <%= image_tag "t-logo1.png", alt: "logo" %>
+                <%= image_tag "valid.jpg", class:"intro-media bg-image overlay-dark60" %>
+                <div class="intro-caption-waper dark-bg">
+                    <div class="intro-full-height container">
+                        <div class="intro-content">
+                            <div class="intro-content-inner">
+                                <h1 class="intro-title mb-10"><span class="text-light">Next</span> Session</h1>
+                                <h5 class="large mb-45">Vous avez bien été ajouté à la Newsletter.</h5>
+                                <ul class="countdown">
+                                    <li>
+                                        <span class="days">00</span>
+                                        <p class="days_ref">days</p>
+                                    </li>
+                                    <li class="seperator">.</li>
+                                    <li>
+                                        <span class="hours">00</span>
+                                        <p class="hours_ref">hours</p>
+                                    </li>
+                                    <li class="seperator">:</li>
+                                    <li>
+                                        <span class="minutes">00</span>
+                                        <p class="minutes_ref">minutes</p>
+                                    </li>
+                                    <li class="seperator">:</li>
+                                    <li>
+                                        <span class="seconds">00</span>
+                                        <p class="seconds_ref">seconds</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Static Hero-->
+
+            </section>
+            <!-- End Intro Section-->
+
+
+
+
+            <!--Footer Section-->
+            <footer id="footer" class="footer section-padding gray-bg">
+                <div class="container text-center">
+
+                    <!--Footer Logo-->
+                    <div class="footer-logo mb-25 wow fadeInUp" data-wow-duration="1.5s">
+                        <a href="https://www.thehackingproject.org/">
+                            <%= image_tag "logo-dark.png", alt: "thp" %>
+                        </a>
+                    </div>
+                    <!--End Footer Logo-->
+
+                    <!-- Copyright -->
+                    <p class="copyright mb-25">
+                        &copy; 2018 <a><b>Team Montpellier</b></a>. All Rights Reserved.<br>
+                        Website by <b>Arthur, Thierry, Ivan et Clement.</b></a>
+                    </p>
+                    <!-- Copyright -->
+
+                    <!-- Social -->
+                    <ul class="social">
+                        <li>
+                            <a href="https://fr-fr.facebook.com/thehackingproject/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/project_hacking" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://fr.linkedin.com/company/the-hacking-project" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+
+                    </ul>
+                    <!-- End Social -->
+
+                </div>
+            </footer>
+            <!-- End Footer Section-->
+
+ </body>
+
+
+
+    <script type="text/javascript">
+        $('.countdown').downCount({
+            date: '01/07/2019 09:00:00',
+            offset: +10
+        }, function () {
+            alert('WOOT WOOT, done!');
+        });
+    </script>

@@ -1,0 +1,27 @@
+
+/*Css type de mes boutons*/
+/*-webkit sert a assurer un affichage sur chrome/safari et -moz pour mozilla*/
+.my-btn {
+  padding: 15px 30px;
+  border: solid 2px #233142;
+  background-color: #233142;
+  color: white;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-transition: all 1.5s ease-out 0s;
+  -moz-transition: all 1.5s ease-out 0s;
+  transition: all 1.5s ease-out 0s;
+}
+
+.btn-troop {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+.my-btn:hover {
+  background-color: #455d7a;
+}

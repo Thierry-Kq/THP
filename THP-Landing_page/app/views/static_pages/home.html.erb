@@ -1,0 +1,420 @@
+<body>
+
+    <!-- Site preloader -->
+    <section id="preloader">
+        <div class="site-spinner"></div>
+    </section>
+    <!-- End Site preloader -->
+
+    <!-- Page Wraper -->
+    <div id="page-wraper">
+        <div class="wrapper">
+            <!--Header-->
+            <div id="header" class="header">
+                <div class="header-inner">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="#">
+                          <%= image_tag "logo-light.png" %>
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+
+                    <!--Navigation Icon-->
+                    <div class="nav-menu-icon">
+                        <a><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!--End Navigation Icon-->
+
+                    <!-- Navigation Menu -->
+                    <div class="nav-menu">
+                        <ul class="nav-menu-inner nav-external">
+                            <li><%= link_to "Home",root_path %></li>
+                            <li><%= link_to "Montpellier", montpellier_path %></li>
+                            <li><%= link_to "Demandeur d'emploi", jobseeker_path %></li>
+                        </ul>
+                    </div>
+                    <!-- End Navigation Menu -->
+                </div>
+            </div>
+            <!--End Header-->
+
+            <!--Intro Section-->
+            <section id="intro">
+                <!--Slider Hero-->
+                <div class="tp-banner-container">
+                    <div class="intro-tp-banner">
+                        <ul>
+                            <!-- SLIDE  -->
+                            <li class="dark-bg" data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                                <!-- MAIN IMAGE -->
+                                <%= image_tag "27.jpg", alt: "slidebg1", data: { bgfit: "cover", bgposition: "top center", bgrepeat: "no-repeat"} %>
+                                
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption lfb ltt tp-resizeme"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-125"
+                                    data-speed="600"
+                                    data-start="500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <%= image_tag "t-logo1.png", alt: "logo" %>
+
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <h2 class="tp-caption lfb ltt tp-resizeme sc-title"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-25"
+                                    data-speed="600"
+                                    data-start="700"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">We are THP
+                                </h2>
+
+                                <!-- LAYER NR. 3 -->
+                                <p class="tp-caption lfb ltt tp-resizeme sc-paragraph-lead"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="40"
+                                    data-speed="600"
+                                    data-start="900"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    Sans jamais avoir codé, dis toi qu'en 1 mois tu peux réaliser cette page les yeux fermés<br />
+                                    Envie de rejoindre l'aventure ?
+                                </p>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption lfb ltt tp-resizeme sc-button"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="125"
+                                    data-speed="600"
+                                    data-start="1100"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                                    <%=render "shared/newsletter_form", target: "thp_all" %>
+
+                                </div>
+
+                            </li>
+
+                            <!-- SLIDE  -->
+                            <li class="dark-bg" data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                                <!-- MAIN IMAGE -->
+                                <%= image_tag "26.jpg", alt: "slidebg2", data: { bgfit: "cover", bgposition: "top center", bgrepeat: "no-repeat"} %>
+                              
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption lfb ltt tp-resizeme"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-125"
+                                    data-speed="600"
+                                    data-start="500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <%= image_tag "t-logo1.png", alt: "logo" %>
+                                    
+
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <h2 class="tp-caption lfb ltt tp-resizeme sc-title"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-25"
+                                    data-speed="600"
+                                    data-start="700"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Profite d'une communauté
+                                </h2>
+
+                                <!-- LAYER NR. 3 -->
+                                <p class="tp-caption lfb ltt tp-resizeme sc-paragraph-lead"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="40"
+                                    data-speed="600"
+                                    data-start="900"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    800 moussaillons ont rejoint l'aventure, et toi ?
+                                </p>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption lfb ltt tp-resizeme sc-button"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="125"
+                                    data-speed="600"
+                                    data-start="1100"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                                    <%=render "shared/newsletter_form", target: "thp_all" %>
+
+                                </div>
+
+                            </li>
+
+                            <!-- SLIDE  -->
+                            <li class="dark-bg" data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                                <!-- MAIN IMAGE -->
+                                <%= image_tag "25.jpg", alt: "slidebg3", data: { bgfit: "cover", bgposition: "top center", bgrepeat: "no-repeat"} %>
+                                
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption lfb ltt tp-resizeme"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-125"
+                                    data-speed="600"
+                                    data-start="500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <%= image_tag "t-logo1.png", alt: "logo" %>
+
+
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <h2 class="tp-caption lfb ltt tp-resizeme sc-title"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="-25"
+                                    data-speed="600"
+                                    data-start="700"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Formation accéléré
+                                </h2>
+
+                                <!-- LAYER NR. 3 -->
+                                <p class="tp-caption lfb ltt tp-resizeme sc-paragraph-lead"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="40"
+                                    data-speed="600"
+                                    data-start="900"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    Tu as 55 jours pour apprendre à coder, sauras-tu relever le défi ?<br />
+                                </p>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption lfb ltt tp-resizeme sc-button"
+                                    data-x="center" data-hoffset="0"
+                                    data-y="center" data-voffset="125"
+                                    data-speed="600"
+                                    data-start="1100"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                                    <%=render "shared/newsletter_form", target: "thp_all" %>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                        <div class="tp-bannertimer"></div>
+                    </div>
+                </div>
+                <!-- End Slider Hero-->
+
+            </section>
+            <!-- End Intro Section-->
+
+            <!-- About Section -->
+            <section id="about" class="section-padding text-center">
+                <div class="container mb-60">
+                    <h2><span class="text-light">The</span> Hacking Project</h2>
+                    <p class="max-width-700 lead">Formation Ruby, Rails, HTML 5, CSS 3, Javascript, Databases, API.</p>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
+                            <div class="icon-top"><i class="icon icon-basic-anchor"></i></div>
+                            <h5 class="features-title">Aucun prérequis</h5>
+                            <p>Que vous soyez vendeur de canards, acheteur de loutres ou tout simplement un pingouin vous serez le bienvenue.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.4s" data-wow-duration="2s">
+                            <div class="icon-top"><i class="icon icon-basic-alarm"></i></div>
+                            <h5 class="features-title">Plusieurs formules</h5>
+                            <p>55 jours intenses, des journées de 12h. Vous resortirez changés.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
+                            <div class="icon-top"><i class="icon icon-basic-globe"></i></div>
+                            <h5 class="features-title">3 mois</h5>
+                            <p>3 formules répondant à vos attentes. Gratuite, 314,17€ ou all-inclusive à 500€.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="#contact-us" target="_self" class="btn btn-md btn-black">Inscription à la newsletter</a>
+
+            </section>
+            <!-- End About Section -->
+
+
+
+            <!-- Counter Section -->
+            
+            <section <%= image_tag "14.jpg", class: "section-padding bg-image overlay-dark dark-bg" %> >
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="alt-icon-top counter-icon"><i class="icon icon-basic-cup"></i></div>
+                            <h1 class="counter-title counter-num">800</h1>
+                            <h5 class="counter-sub-title">Moussaillons</h5>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="alt-icon-top counter-icon"><i class="icon icon-basic-heart"></i></div>
+                            <h1 class="counter-title counter-num">25</h1>
+                            <h5 class="counter-sub-title">Villes</h5>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="alt-icon-top counter-icon"><i class="icon icon-basic-case"></i></div>
+                            <h1 class="counter-title counter-num">7</h1>
+                            <h5 class="counter-sub-title">Pays</h5>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="alt-icon-top counter-icon"><i class="icon icon-basic-lightbulb"></i></div>
+                            <h1 class="counter-title counter-num">6</h1>
+                            <h5 class="counter-sub-title">Sessions</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Counter Section -->
+
+
+            <!-- Contact Form -->
+            <section id="contact-us" class="section-padding dark-bg bg-image overlay-dark60" data-background-img="../../assets/images/full/20.jpg" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h6 class="page-title-alt color mb-15">Envie d'en savoir plus? </h6>
+                            <h2 class="page-title">Abonnez-vous <span class="text-light">à notre Newsletter</span></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2 text-center">
+                            <%=render "shared/newsletter_form", target: "thp_all" %>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Contact Form -->
+
+
+
+            <!--Footer Section-->
+            <footer id="footer" class="footer section-padding gray-bg">
+                <div class="container text-center">
+
+                    <!--Footer Logo-->
+                    <div class="footer-logo mb-25 wow fadeInUp" data-wow-duration="1.5s">
+                        <a href="https://www.thehackingproject.org/">
+                            <%= image_tag "logo-dark.png", alt: "thp" %>
+                        </a>
+                    </div>
+                    <!--End Footer Logo-->
+
+                    <!-- Copyright -->
+                    <p class="copyright mb-25">
+                        &copy; 2018 <a><b>Team Montpellier</b></a>. All Rights Reserved.<br>
+                        Website by <b>Arthur, Thierry, Ivan et Clement.</b></a>
+                    </p>
+                    <!-- Copyright -->
+
+                    <!-- Social -->
+                    <ul class="social">
+                        <li>
+                            <a href="https://fr-fr.facebook.com/thehackingproject/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/project_hacking" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://fr.linkedin.com/company/the-hacking-project" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+
+                    </ul>
+                    <!-- End Social -->
+
+                </div>
+            </footer>
+            <!-- End Footer Section-->
+
+
+        </div>
+    </div>
+    <!-- End Page Wraper -->

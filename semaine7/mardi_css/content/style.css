@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: solid 5px black;
+  background-color: #212121;
+  /*border-color: #060606;*/
+  height: 120px;
+}
+
+.nav-avatar {
+  display: flex;
+  justify-content: space-between;
+  /*border: solid;*/
+  width: 300px;
+  border-color: red;
+}
+.nav-content {
+  display: flex;
+  /*flex-direction: row;*/
+  /*flex-wrap: nowrap;*/
+  align-items: center;
+  /*border: solid;*/
+  border-color: blue;
+  height: 100px;
+  margin: 0;
+  width: 600px;
+  justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    /*margin-left: 2em;*/
+    display: block;
+    background-color: #212121;
+    color: white;
+    font-size: 1.4em;
+    margin-top: 0.6em;
+    text-align: center;
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+.avatar-nav {
+  height: 100px;
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+/*Css type de mes boutons*/
+/*-webkit sert a assurer un affichage sur chrome/safari et -moz pour mozilla*/
+.my-btn {
+  padding: 15px 30px;
+  border: solid 2px #233142;
+  background-color: #233142;
+  color: white;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-transition: all 1.5s ease-out 0s;
+  -moz-transition: all 1.5s ease-out 0s;
+  transition: all 1.5s ease-out 0s;
+}
+
+.btn-troop {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+.my-btn:hover {
+  background-color: #455d7a;
+}
+
+
+.avatar-big {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.avatar-small {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 150px;
+}
+
+.card .avatar-small {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: -100px;
+  /*margin-right: -150px;*/
+  /*border: solid 4px blue;*/
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 4px 20px;
+    transition: 0.3s;
+    opacity: .8;
+    position: absolute;
+    left: 40%;
+    /*border: solid 4px red;*/
+}
+
+.card:hover {
+    box-shadow: 0 16px 40px;
+}
+
+.container {
+  /*border: solid 4px red;*/
+
+}
+.container p, h4 {
+  margin-left: 10px;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+}

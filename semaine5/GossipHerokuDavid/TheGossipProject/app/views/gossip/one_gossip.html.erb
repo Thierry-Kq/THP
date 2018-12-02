@@ -1,0 +1,23 @@
+<h1>From <span class="gossip_author"><%= Gossip.find(params['id']).author.first_name %></span></h1><br>
+<p><%= Gossip.find(params['id']).content %><br><br>
+Date de création : <%= Gossip.find(params['id']).created_at %><br>
+
+</p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Gossip number</th>
+      <th scope="col">Author</th>
+      <th scope="col">Content</th>
+      <th scope="col">Creation date</th>
+    </tr>
+  </thead>
+
+      <tr class="table-primary">
+      <th scope="row"><%= Gossip.find(params['id']).id %></th>
+      <td><%= Gossip.find(params['id']).author.first_name %></td>
+      <td><%= Gossip.find(params['id']).content %></td>
+      <td><%= Gossip.find(params['id']).created_at %></td>
+    </tr>
+</table>

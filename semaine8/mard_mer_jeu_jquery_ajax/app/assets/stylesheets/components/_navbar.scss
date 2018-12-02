@@ -1,0 +1,13 @@
+.mydrop {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mydrop , li {
+  list-style-type: none;
+}
+

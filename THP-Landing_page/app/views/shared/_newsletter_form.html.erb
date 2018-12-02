@@ -1,0 +1,5 @@
+<%=form_tag(subscribe_nl_url, method: :post) do %>
+  <%= hidden_field_tag "targeted_customer", target%>
+  <%= email_field_tag :email, nil, placeholder: "Saissez votre email" ,class: "input-md form-full"%>
+  <%= submit_tag "S'abonner", class: 'btn-contact-submit btn btn-md btn-color' %>
+<%end%>

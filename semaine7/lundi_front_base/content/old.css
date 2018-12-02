@@ -1,0 +1,46 @@
+
+
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  float: right;
+}
+
+
+
+li a {
+    margin-left: 2em;
+    display: block;
+    background-color: #333;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+p {
+  color: red;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+.navbar {
+  border: solid;
+  border-color: red;
+  display: flex;
+  justify-content: row;
+  /*background-color: #232621;*/
+}
+
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
